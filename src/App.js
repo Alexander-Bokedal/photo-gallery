@@ -1,24 +1,22 @@
-import logo from './logo.svg';
-import './App.css';
+import styled from 'styled-components'; 
+import {motion} from 'framer-motion';
+import Photographs from './Components/Photographs';
+import Erika from './Assets/Erika.jpg';
+
+const Gallery = styled(motion.div)`
+display: flex; 
+margin: 0 auto;
+justify-content: center;
+align-items: center;
+height: 100vh;
+max-width: 300px;
+`
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+   <Gallery>
+    <Photographs image={Erika}></Photographs>
+   </Gallery>
   );
 }
 
